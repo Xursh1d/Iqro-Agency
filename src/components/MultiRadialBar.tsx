@@ -3,7 +3,7 @@ import ReactApexChart from 'react-apexcharts';
 
 const MultiRadialBar = () => {
     const [series] = useState([44, 55, 67]);
-    const [options] = useState({
+    const [options] = useState<ApexCharts.ApexOptions>({
         chart: {
             width: "100%",
             height: "100%",
@@ -11,9 +11,6 @@ const MultiRadialBar = () => {
         },
         plotOptions: {
             radialBar: {
-                value: {
-                    show: false,
-                },
                 dataLabels: {
                     show: false
                 },
@@ -34,14 +31,13 @@ const MultiRadialBar = () => {
                 }
             }
         },
-
         stroke: {
             lineCap: 'round'
         },
         colors: ['#563BFF', '#FF7049', '#20C997'],
         responsive: [
             {
-                breakpoint: 764, // Define the breakpoint for mobile devices
+                breakpoint: 764,
                 options: {
                     plotOptions: {
                         radialBar: {

@@ -9,7 +9,7 @@ interface IRadialBarProps {
 }
 const RadialBar = ({ label, hollowColor, value, basicColor }: IRadialBarProps) => {
     const [series] = useState([value]);
-    const [options] = useState({
+    const [options] = useState<ApexCharts.ApexOptions>({
         chart: {
             type: 'radialBar',
         },
@@ -31,9 +31,9 @@ const RadialBar = ({ label, hollowColor, value, basicColor }: IRadialBarProps) =
                     },
                 },
                 track: {
+                    margin: 0,
                     background: '#F7F8FB',
                     strokeWidth: '100%',
-                    margin: 0, // margin is in pixels
                     dropShadow: {
                         enabled: true,
                         top: 12,
@@ -69,7 +69,14 @@ const RadialBar = ({ label, hollowColor, value, basicColor }: IRadialBarProps) =
     });
 
     return (
-        <ReactApexChart className="mt-5" options={options} series={series} type="radialBar" height="100%" width="100%" />
+        <ReactApexChart
+            className="mt-5"
+            options={options}
+            series={series}
+            type="radialBar"
+            height="100%"
+            width="100%"
+        />
     );
 };
 

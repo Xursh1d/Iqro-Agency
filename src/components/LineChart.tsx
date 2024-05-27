@@ -1,12 +1,12 @@
 import ReactApexChart from 'react-apexcharts';
 
-const LineChart = () => {
+const LineChart: React.FC = () => {
     const series = [{
         name: 'Users',
         data: [39, 75, 46, 77, 50, 76, 37, 76, 37],
     }];
 
-    const options = {
+    const options: ApexCharts.ApexOptions = {
         chart: {
             type: 'area',
             toolbar: {
@@ -34,13 +34,6 @@ const LineChart = () => {
         },
         stroke: {
             curve: 'smooth',
-            dropShadow: {
-                top: 12,
-                left: 2,
-                blur: 14,
-                opacity: 0.5,
-                color: 'red'
-            }
         },
         grid: {
             show: false
@@ -64,7 +57,6 @@ const LineChart = () => {
                     fontFamily: "Poppins,Verdana",
                     fontWeight: "bold",
                     fontSize: "12px",
-                    color: "#A3ABBD"
                 }
             },
         },
@@ -74,7 +66,13 @@ const LineChart = () => {
     };
 
     return (
-        <ReactApexChart options={options} series={series} className="pl-2 md:px-5" type="area" height="90%" />
+        <ReactApexChart
+            options={options}
+            series={series}
+            className="pl-2 md:px-5"
+            type="area"
+            height="90%"
+        />
     );
 };
 
