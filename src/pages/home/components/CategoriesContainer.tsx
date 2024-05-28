@@ -3,7 +3,7 @@ import Card from "./Card"
 
 export default function CategoriesContainer() {
     return (
-        <div className="min-h-[274px] sm:min-h-[174px] md:min-h-[274px] gap-3 md:gap-7 col-span-7 xl:col-span-4 flex flex-col justify-between">
+        <section className="min-h-[274px] sm:min-h-[174px] md:min-h-[274px] gap-3 md:gap-7 col-span-7 xl:col-span-4 flex flex-col justify-between">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 md:gap-7 min-h-[200px] sm:min-h-[150px] md:min-h-[200px]">
                 <Card img={<img src="/users.svg" alt="Users" />} title="Users" count="72.6k" percent="+25%" color="#dbeafe" />
                 <Card img={<img src="/sessions.svg" alt="Sessions" />} title="Sessions" count="87.2k" percent="+47%" color="#fee2e2" />
@@ -16,6 +16,6 @@ export default function CategoriesContainer() {
                     Export
                 </button>
             </div>
-        </div >
+        </section >
     )
 }

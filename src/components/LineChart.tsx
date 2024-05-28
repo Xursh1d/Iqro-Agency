@@ -9,6 +9,8 @@ const LineChart: React.FC = () => {
     const options: ApexCharts.ApexOptions = {
         chart: {
             type: 'area',
+            offsetY: 0,
+            offsetX: 0,
             toolbar: {
                 show: false,
             },

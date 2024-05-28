@@ -15,13 +15,13 @@ function TextLine({ text1, text2 }: ITextLineProps) {
 
 export default function MultiLineChartContainer() {
     return (
-        <div className="col-span-7 space-y-2 xl:col-span-3">
+        <section className="col-span-7 space-y-2 xl:col-span-3">
             <div className="flex items-center justify-between font-bold font-roboto">
                 <Title title="Sessions By Device" />
                 <SubTitle title="Year" />
             </div>
             <div className="w-full bg-white overflow-hidden h-[220px] md:h-[294px] grid grid-cols-3 rounded-base">
-                <div className="col-span-2 overflow-hidden">
+                <div className="col-span-2 xl:p-5 overflow-hidden">
                     <MultiRadialBar />
                 </div>
                 <div className="flex flex-col items-start justify-center col-span-1 gap-1 md:gap-4">
@@ -39,7 +39,7 @@ export default function MultiLineChartContainer() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

@@ -20,7 +20,7 @@ function ProgressComponent({ title, value, color }: IProgressProps) {
 
 export default function ProgressContainer() {
     return (
-        <div className="font-bold col-span-7 xl:col-span-3 flex flex-col justify-between min-h-[220px]  md:h-[274px] font-roboto bg-white rounded-base p-4 md:p-7">
+        <section className="font-bold col-span-7 xl:col-span-3 flex flex-col justify-between min-h-[220px]  md:h-[274px] font-roboto bg-white rounded-base p-4 md:p-7">
             <Title title="Sessions By Device" />
             <div className="grid items-center grid-cols-[1fr_3fr_1fr]  gap-3 pb-5 border-b border-gray-300">
                 <span className="text-[12px] md:text-sm text-dark">Channel</span>
@@ -30,6 +30,6 @@ export default function ProgressContainer() {
             <ProgressComponent title="Direct" value="45%" color="#563BFF" />
             <ProgressComponent title="Direct" value="50%" color="#FF7049" />
             <ProgressComponent title="Direct" value="67%" color="#20C997" />
-        </div>
+        </section>
     )
 }

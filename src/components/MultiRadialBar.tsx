@@ -5,17 +5,22 @@ const MultiRadialBar = () => {
     const [series] = useState([44, 55, 67]);
     const [options] = useState<ApexCharts.ApexOptions>({
         chart: {
-            width: "100%",
-            height: "100%",
             type: 'radialBar',
+            height: '100%',
+            width: '100%',
         },
         plotOptions: {
             radialBar: {
+                offsetX: 0,
+                offsetY: 18,
                 dataLabels: {
-                    show: false
+                    show: false,
                 },
                 track: {
-                    margin: 20,
+                    strokeWidth: "80%",
+                    startAngle: undefined,
+                    endAngle: undefined,
+                    margin: 15,
                     background: "#F2F3F9",
                     dropShadow: {
                         enabled: true,
@@ -28,33 +33,24 @@ const MultiRadialBar = () => {
                 },
                 hollow: {
                     size: "0"
-                }
+                },
             }
         },
         stroke: {
             lineCap: 'round'
         },
         colors: ['#563BFF', '#FF7049', '#20C997'],
-        responsive: [
-            {
-                breakpoint: 764,
-                options: {
-                    plotOptions: {
-                        radialBar: {
-                            track: {
-                                margin: 15,
-                            }
-                        }
-                    }
-                }
-            }
-        ]
     });
 
     return (
-        <ReactApexChart className="mt-4 sm:mt-3" options={options} series={series} type="radialBar" height="100%" />
+        <ReactApexChart
+            options={options}
+            series={series}
+            type="radialBar"
+            height="100%"
+            width="100%"
+        />
     );
 };
-
 
 export default MultiRadialBar;
